@@ -11,5 +11,6 @@ int CALLBACK _tWinMain(HINSTANCE hInstance,HINSTANCE hPrevInst,LPTSTR lpCmdLine,
     CELLWinApp  app(hInstance);
 
     app.main(800,600);
+    system("pause");
     return  0;
 }
