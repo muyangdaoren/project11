@@ -14,7 +14,7 @@ public:
     CELLWinApp(HINSTANCE hInstance)
         :_hInst(hInstance)
     {
-        //1 注册一个窗口类
+        //1 娉ㄥ唽涓�涓獥鍙ｇ被
         WNDCLASSEX  wndClass;
         memset(&wndClass,0,sizeof(wndClass));
         wndClass.cbSize         =   sizeof(wndClass);
@@ -54,7 +54,7 @@ public:
 
     int     main(int width,int height)
     {
-        //2 创建窗口
+        //2 鍒涘缓绐楀彛
 
         _hWnd   =   CreateWindow(_T("CELLWinApp"),_T("CELLWinApp"),WS_OVERLAPPEDWINDOW,0,0,width,height,0,0,_hInst,this);
 
@@ -62,12 +62,12 @@ public:
         {
             return  0;
         }
-        //3 更新显示窗口
+        //3 鏇存柊鏄剧ず绐楀彛
         UpdateWindow(_hWnd);
-        //4 显示
+        //4 鏄剧ず
         ShowWindow(_hWnd,SW_MAXIMIZE);
 
-        //5 消息循环
+        //5 娑堟伅寰幆
         MSG     msg =   {0};
 
         while(GetMessage(&msg,0,0,0))
@@ -77,5 +77,5 @@ public:
         }
         return  0;
     }
-    
+    std::cout<<"hello world!"<<std::endl;
 };
